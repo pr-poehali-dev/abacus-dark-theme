@@ -1,19 +1,21 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import MarketplaceSection from "@/components/MarketplaceSection";
 import SecuritySection from "@/components/SecuritySection";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-abacus-dark text-white">
+    <div className="min-h-screen bg-abacus-dark text-white flex flex-col">
       <Navbar />
-      <Hero />
-      <Features />
-      <MarketplaceSection />
-      <SecuritySection />
+      <main className="flex-grow">
+        <Hero />
+        <Features />
+        <MarketplaceSection />
+        <SecuritySection />
+      </main>
       <Footer />
     </div>
   );

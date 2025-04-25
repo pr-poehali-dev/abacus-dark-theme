@@ -18,10 +18,10 @@ const SecuritySection = () => {
         <div className="max-w-3xl mx-auto mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-white">
-              Безопасность на уровне <span className="text-gradient">военных стандартов</span>
+              Security at <span className="text-gradient">Military-Grade</span> Standards
             </h2>
             <p className="text-abacus-text text-lg">
-              Мы используем многоуровневую архитектуру безопасности для защиты ваших данных и транзакций
+              We use a multi-layered security architecture to protect your data and transactions
             </p>
           </div>
           
@@ -31,15 +31,15 @@ const SecuritySection = () => {
                 <ShieldAlert size={24} className="text-abacus-accent" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">Защита от хакерских атак</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Protection Against Hacker Attacks</h3>
                 <p className="text-abacus-text mb-4">
-                  Наша инфраструктура защищена от всех известных векторов атак, включая DDoS, брутфорс, 
-                  SQL-инъекции и XSS. Мы регулярно проводим пентесты с привлечением специалистов мирового уровня.
+                  Our infrastructure is protected against all known attack vectors, including DDoS, brute force,
+                  SQL injections, and XSS. We regularly conduct pentests with world-class specialists.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="flex items-center text-sm text-abacus-text">
                     <div className="w-2 h-2 bg-abacus-accent rounded-full mr-2"></div>
-                    Защита от DDoS атак
+                    DDoS Attack Protection
                   </div>
                   <div className="flex items-center text-sm text-abacus-text">
                     <div className="w-2 h-2 bg-abacus-accent rounded-full mr-2"></div>
@@ -47,11 +47,11 @@ const SecuritySection = () => {
                   </div>
                   <div className="flex items-center text-sm text-abacus-text">
                     <div className="w-2 h-2 bg-abacus-accent rounded-full mr-2"></div>
-                    Системы обнаружения вторжений
+                    Intrusion Detection Systems
                   </div>
                   <div className="flex items-center text-sm text-abacus-text">
                     <div className="w-2 h-2 bg-abacus-accent rounded-full mr-2"></div>
-                    Постоянный мониторинг безопасности
+                    Continuous Security Monitoring
                   </div>
                 </div>
               </div>
@@ -62,53 +62,53 @@ const SecuritySection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           <SecurityFeatureCard 
             icon={<Lock />}
-            title="End-to-End шифрование"
-            description="Все коммуникации защищены шифрованием уровня AES-256 и RSA-4096, недоступным даже для администраторов платформы."
+            title="End-to-End Encryption"
+            description="All communications are protected by AES-256 and RSA-4096 level encryption, inaccessible even to platform administrators."
           />
           
           <SecurityFeatureCard 
             icon={<Key />}
-            title="Мультиподпись транзакций"
-            description="Все транзакции требуют множественного подтверждения для обеспечения безопасности и снижения рисков мошенничества."
+            title="Multi-signature Transactions"
+            description="All transactions require multiple confirmations to ensure security and reduce the risk of fraud."
           />
           
           <SecurityFeatureCard 
             icon={<Eye />}
-            title="Отсутствие следов активности"
-            description="Мы не храним логи, историю действий или информацию, которая может скомпрометировать пользователей."
+            title="No Activity Traces"
+            description="We don't store logs, action history, or information that could compromise users."
           />
           
           <SecurityFeatureCard 
             icon={<Fingerprint />}
-            title="Биометрическая аутентификация"
-            description="Опциональная дополнительная защита с использованием биометрических данных без их хранения на серверах."
+            title="Biometric Authentication"
+            description="Optional additional protection using biometric data without storing it on servers."
           />
           
           <SecurityFeatureCard 
             icon={<FileCheck />}
-            title="Смарт-контракты на блокчейне"
-            description="Все финансовые операции обеспечены надежностью и прозрачностью блокчейн-технологий."
+            title="Blockchain Smart Contracts"
+            description="All financial operations are secured by the reliability and transparency of blockchain technologies."
           />
           
           <SecurityFeatureCard 
             icon={<ShieldAlert />}
-            title="Обнаружение аномалий"
-            description="Система автоматически выявляет подозрительную активность и блокирует потенциальные угрозы безопасности."
+            title="Anomaly Detection"
+            description="The system automatically identifies suspicious activity and blocks potential security threats."
           />
         </div>
         
         <div className="max-w-3xl mx-auto text-center">
           <div className="p-6 bg-gradient-to-r from-abacus-accent/20 to-abacus-accent2/20 rounded-lg mb-8">
-            <h3 className="text-xl font-bold text-white mb-4">Наш подход к безопасности</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Our Approach to Security</h3>
             <p className="text-abacus-text">
-              Мы рассматриваем безопасность не как отдельный компонент, а как основу всей нашей архитектуры. 
-              Каждое решение, от пользовательского интерфейса до бэкенд-инфраструктуры, 
-              принимается с учетом высочайших стандартов безопасности и конфиденциальности.
+              We view security not as a separate component, but as the foundation of our entire architecture.
+              Every decision, from user interface to backend infrastructure,
+              is made with the highest standards of security and confidentiality in mind.
             </p>
           </div>
           
           <Button className="bg-abacus-accent hover:bg-abacus-accent2 text-black">
-            Подробнее о системе безопасности
+            More About Our Security System
           </Button>
         </div>
       </div>

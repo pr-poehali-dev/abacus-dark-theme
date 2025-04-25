@@ -24,28 +24,28 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/" className="text-abacus-text hover:text-abacus-accent transition-colors">
-              Главная
+              Home
             </Link>
             <Link to="/marketplace" className="text-abacus-text hover:text-abacus-accent transition-colors">
-              Маркетплейс
+              Marketplace
             </Link>
             <Link to="/vendors" className="text-abacus-text hover:text-abacus-accent transition-colors">
-              Продавцы
+              Vendors
             </Link>
             <Link to="/faq" className="text-abacus-text hover:text-abacus-accent transition-colors">
               FAQ
             </Link>
             <Link to="/support" className="text-abacus-text hover:text-abacus-accent transition-colors">
-              Поддержка
+              Support
             </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-3">
             <Button variant="ghost" size="sm" className="text-abacus-text">
-              <User size={16} className="mr-1" /> Войти
+              <User size={16} className="mr-1" /> Sign In
             </Button>
             <Button className="bg-abacus-accent hover:bg-abacus-accent2 text-black">
-              Регистрация
+              Register
             </Button>
           </div>
 
@@ -62,26 +62,26 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div className="md:hidden pt-4 pb-3 space-y-3 animate-fade-in">
             <Link to="/" className="block py-2 text-abacus-text hover:text-abacus-accent">
-              Главная
+              Home
             </Link>
             <Link to="/marketplace" className="block py-2 text-abacus-text hover:text-abacus-accent">
-              Маркетплейс
+              Marketplace
             </Link>
             <Link to="/vendors" className="block py-2 text-abacus-text hover:text-abacus-accent">
-              Продавцы
+              Vendors
             </Link>
             <Link to="/faq" className="block py-2 text-abacus-text hover:text-abacus-accent">
               FAQ
             </Link>
             <Link to="/support" className="block py-2 text-abacus-text hover:text-abacus-accent">
-              Поддержка
+              Support
             </Link>
             <div className="pt-3 flex space-x-3">
               <Button variant="ghost" size="sm" className="text-abacus-text">
-                <User size={16} className="mr-1" /> Войти
+                <User size={16} className="mr-1" /> Sign In
               </Button>
               <Button className="bg-abacus-accent hover:bg-abacus-accent2 text-black">
-                Регистрация
+                Register
               </Button>
             </div>
           </div>

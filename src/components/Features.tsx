@@ -6,65 +6,65 @@ const Features = () => {
     <div className="bg-abacus-darker py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-white">Почему <span className="text-gradient">ABACUS</span> лидирует среди даркнет-площадок</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">Why <span className="text-gradient">ABACUS</span> Leads Among Darknet Platforms</h2>
           <p className="text-abacus-text text-lg">
-            Наша платформа объединяет передовые технологии безопасности с простотой использования
+            Our platform combines cutting-edge security technology with ease of use
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard 
             icon={<Lock />}
-            title="Многоуровневая аутентификация"
-            description="2FA с PGP, биометрия и другие современные методы подтверждения личности для максимальной защиты."
+            title="Multi-layer Authentication"
+            description="2FA with PGP, biometrics, and other modern identity verification methods for maximum protection."
           />
           
           <FeatureCard 
             icon={<Shield />}
-            title="Продвинутое шифрование"
-            description="Все коммуникации защищены военным уровнем шифрования. Ни один байт информации не доступен посторонним."
+            title="Advanced Encryption"
+            description="All communications are protected by military-grade encryption. Not a single byte of information is accessible to outsiders."
           />
           
           <FeatureCard 
             icon={<MessageSquareX />}
-            title="Самоуничтожающиеся сообщения"
-            description="Автоматическое удаление всей переписки после прочтения или по истечении времени."
+            title="Self-destructing Messages"
+            description="Automatic deletion of all correspondence after reading or upon expiration of time."
           />
           
           <FeatureCard 
             icon={<Eye />}
-            title="Отсутствие логов"
-            description="Мы не храним историю ваших действий, IP-адреса, данные или историю транзакций после завершения операций."
+            title="No Logs Policy"
+            description="We do not store your activity history, IP addresses, data, or transaction history after operations are completed."
           />
           
           <FeatureCard 
             icon={<Users />}
-            title="Защита от мошенников"
-            description="Многоэтапная верификация продавцов и отзывов, подтверждение сделок и репутационная система."
+            title="Fraud Protection"
+            description="Multi-stage verification of vendors and reviews, transaction confirmation, and reputation system."
           />
           
           <FeatureCard 
             icon={<Award />}
-            title="Прозрачная система рейтингов"
-            description="Проверенные механизмы отзывов с защитой от накруток и проверкой подлинности покупок."
+            title="Transparent Rating System"
+            description="Verified review mechanisms with protection against manipulation and verification of purchase authenticity."
           />
           
           <FeatureCard 
             icon={<Server />}
-            title="Распределенная инфраструктура"
-            description="Сервера расположены в разных юрисдикциях для обеспечения бесперебойной работы и защиты от блокировок."
+            title="Distributed Infrastructure"
+            description="Servers located in different jurisdictions to ensure uninterrupted operation and protection against blockages."
           />
           
           <FeatureCard 
             icon={<UserCheck />}
-            title="Продвинутая система верификации"
-            description="Проверка продавцов через тестовые покупки и многоступенчатую систему подтверждения."
+            title="Advanced Verification System"
+            description="Vendor verification through test purchases and a multi-step confirmation system."
           />
           
           <FeatureCard 
             icon={<Shield />}
-            title="Анти-фишинг защита"
-            description="Персональный код подлинности для защиты от поддельных версий сайта и попыток клонирования."
+            title="Anti-phishing Protection"
+            description="Personal authenticity code to protect against fake versions of the site and cloning attempts."
           />
         </div>
       </div>

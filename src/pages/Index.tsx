@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-abacus-dark text-white flex flex-col">
+    <div className="min-h-screen bg-black text-white flex flex-col">
       <Navbar />
       <main className="flex-grow">
         <Hero />

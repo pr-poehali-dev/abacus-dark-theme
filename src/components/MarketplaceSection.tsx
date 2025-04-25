@@ -1,160 +1,165 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Star, ShieldCheck, Clock } from "lucide-react";
+import { ArrowRight, Package, Check, AlertTriangle } from "lucide-react";
 
 const MarketplaceSection = () => {
+  const categories = [
+    {
+      name: "Digital Goods",
+      description: "Accounts, software, guides, ebooks",
+      listings: 2547,
+      verified: true
+    },
+    {
+      name: "Financial Services",
+      description: "Cryptocurrency, banking, trading",
+      listings: 1283,
+      verified: true
+    },
+    {
+      name: "Security & Privacy",
+      description: "VPN, secure communication, encryption",
+      listings: 976,
+      verified: true
+    },
+    {
+      name: "Electronics",
+      description: "Devices, components, hardware",
+      listings: 1450,
+      verified: false
+    },
+    {
+      name: "Premium Services",
+      description: "Custom programming, design, consultation",
+      listings: 842,
+      verified: true
+    },
+    {
+      name: "Educational Content",
+      description: "Courses, tutorials, research papers",
+      listings: 1203,
+      verified: false
+    }
+  ];
+
   return (
-    <div className="bg-abacus-dark py-20 relative">
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-abacus-darker to-abacus-dark opacity-70"></div>
+    <div className="bg-[#1A1F2C] py-20 relative">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605792657660-596af9009e82?q=80&w=2002')] bg-center bg-cover opacity-5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-white">Extensive <span className="text-gradient">Product Catalog</span></h2>
-          <p className="text-abacus-text text-lg">
-            Our platform features thousands of offerings from verified vendors
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono">
+            <span className="bg-gradient-to-r from-[#9b87f5] to-[#D6BCFA] bg-clip-text text-transparent">
+              Browse the Marketplace
+            </span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Explore thousands of listings across various categories, all with our secure escrow protection and vendor verification system
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {/* Category cards */}
-          <CategoryCard
-            name="Digital Goods"
-            image="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=500"
-            listings={1240}
-            rating={4.9}
-          />
-          
-          <CategoryCard
-            name="Educational Materials"
-            image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=500"
-            listings={876}
-            rating={4.7}
-          />
-          
-          <CategoryCard
-            name="IT Services"
-            image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=500"
-            listings={625}
-            rating={4.8}
-          />
-          
-          <CategoryCard
-            name="Private Access"
-            image="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=500"
-            listings={412}
-            rating={4.6}
-          />
-          
-          <CategoryCard
-            name="Information Security"
-            image="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=500"
-            listings={320}
-            rating={4.9}
-          />
-          
-          <CategoryCard
-            name="Consulting"
-            image="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=500"
-            listings={290}
-            rating={4.5}
-          />
+          {categories.map((category, index) => (
+            <div key={index} className="bg-black border border-[#9b87f5]/10 hover:border-[#9b87f5]/30 rounded-md p-6 transition-all duration-300 hover:translate-y-[-4px]">
+              <div className="flex justify-between items-start mb-4">
+                <div className="text-[#9b87f5]">
+                  <Package size={28} />
+                </div>
+                {category.verified ? (
+                  <div className="bg-emerald-900/30 text-emerald-500 text-xs py-1 px-2 rounded-full flex items-center">
+                    <Check size={12} className="mr-1" /> Verified
+                  </div>
+                ) : (
+                  <div className="bg-amber-900/30 text-amber-500 text-xs py-1 px-2 rounded-full flex items-center">
+                    <AlertTriangle size={12} className="mr-1" /> Caution
+                  </div>
+                )}
+              </div>
+              
+              <h3 className="text-lg font-bold text-white mb-2 font-mono">{category.name}</h3>
+              <p className="text-gray-400 text-sm mb-4">{category.description}</p>
+              
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-gray-500 font-mono">{category.listings} active listings</span>
+                <Button variant="ghost" size="sm" className="text-[#9b87f5] hover:bg-[#9b87f5]/10 p-0 h-auto">
+                  Browse <ArrowRight size={14} className="ml-1" />
+                </Button>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="text-center">
-          <Button className="bg-abacus-accent hover:bg-abacus-accent2 text-black">
-            View All Categories <ChevronRight size={16} />
-          </Button>
-        </div>
-        
-        <div className="border-t border-abacus-accent/10 mt-20 pt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="bg-black/80 backdrop-blur-sm border border-[#9b87f5]/20 rounded-lg p-6 md:p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Why Vendors Choose <span className="text-gradient">ABACUS</span></h3>
-              <p className="text-abacus-text mb-6">
-                Our platform provides vendors with a secure and reliable environment for conducting business,
-                with protection against fraud and guaranteed confidentiality.
+              <h3 className="text-2xl font-bold text-white mb-4 font-mono">Become a Verified Vendor</h3>
+              <p className="text-gray-400 mb-6">
+                Join our network of trusted sellers and gain access to our growing customer base. 
+                Our vendor program includes premium placement, reduced fees, and priority support.
               </p>
-              
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 text-gray-400 mb-6">
                 <li className="flex items-start">
-                  <div className="bg-abacus-accent/20 rounded-full p-1 mr-3 mt-0.5">
-                    <ShieldCheck size={16} className="text-abacus-accent" />
-                  </div>
-                  <div className="text-abacus-text">
-                    <span className="font-bold text-white">Reputation Protection</span> - a system of reviews and ratings
-                    that confirms the quality of your services.
-                  </div>
+                  <Check size={18} className="text-[#9b87f5] mr-2 mt-1 flex-shrink-0" />
+                  <span>Access to 100,000+ monthly active users</span>
                 </li>
-                
                 <li className="flex items-start">
-                  <div className="bg-abacus-accent/20 rounded-full p-1 mr-3 mt-0.5">
-                    <Clock size={16} className="text-abacus-accent" />
-                  </div>
-                  <div className="text-abacus-text">
-                    <span className="font-bold text-white">Fast Payouts</span> - receive funds
-                    immediately after confirming product delivery.
-                  </div>
+                  <Check size={18} className="text-[#9b87f5] mr-2 mt-1 flex-shrink-0" />
+                  <span>Advanced analytics and sales optimization tools</span>
                 </li>
-                
                 <li className="flex items-start">
-                  <div className="bg-abacus-accent/20 rounded-full p-1 mr-3 mt-0.5">
-                    <Star size={16} className="text-abacus-accent" />
-                  </div>
-                  <div className="text-abacus-text">
-                    <span className="font-bold text-white">VIP Status</span> - additional privileges
-                    available for vendors with high ratings.
-                  </div>
+                  <Check size={18} className="text-[#9b87f5] mr-2 mt-1 flex-shrink-0" />
+                  <span>Competitive commission rates starting at just 3%</span>
                 </li>
               </ul>
-              
-              <Button variant="outline" className="border-abacus-accent/30 hover:bg-abacus-accent/10 text-abacus-text">
-                Become a Vendor
+              <Button className="bg-[#9b87f5] hover:bg-[#7E69AB] text-black font-mono">
+                Apply for Vendor Status
               </Button>
             </div>
-            
-            <div className="bg-abacus-darker rounded-lg border border-abacus-accent/10 p-6">
-              <div className="text-right mb-2 text-sm text-abacus-text">Platform Statistics</div>
+            <div className="bg-[#1A1F2C] border border-[#9b87f5]/10 rounded-lg p-6">
+              <h4 className="text-lg font-bold text-white mb-4 font-mono">Marketplace Statistics</h4>
               <div className="space-y-4">
-                <StatsItem label="Active Vendors" value="12,421" />
-                <StatsItem label="Monthly Transactions" value="86,500+" />
-                <StatsItem label="Average Service Rating" value="4.88 / 5" />
-                <StatsItem label="Successful Transaction Rate" value="99.7%" />
-                <StatsItem label="Daily Visitors" value="62,000+" />
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-gray-400">Active Vendors</span>
+                    <span className="text-white">738</span>
+                  </div>
+                  <div className="w-full bg-gray-800 rounded-full h-2">
+                    <div className="bg-[#9b87f5] h-2 rounded-full" style={{ width: "73.8%" }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-gray-400">Total Listings</span>
+                    <span className="text-white">12,847</span>
+                  </div>
+                  <div className="w-full bg-gray-800 rounded-full h-2">
+                    <div className="bg-[#9b87f5] h-2 rounded-full" style={{ width: "85.6%" }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-gray-400">Successful Transactions</span>
+                    <span className="text-white">156,392</span>
+                  </div>
+                  <div className="w-full bg-gray-800 rounded-full h-2">
+                    <div className="bg-[#9b87f5] h-2 rounded-full" style={{ width: "92.4%" }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-gray-400">Dispute Ratio</span>
+                    <span className="text-white">0.47%</span>
+                  </div>
+                  <div className="w-full bg-gray-800 rounded-full h-2">
+                    <div className="bg-[#9b87f5] h-2 rounded-full" style={{ width: "0.47%" }}></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-const CategoryCard = ({ name, image, listings, rating }: { name: string, image: string, listings: number, rating: number }) => {
-  return (
-    <div className="bg-abacus-darker border border-abacus-accent/10 rounded-lg overflow-hidden card-hover">
-      <div className="h-36 w-full overflow-hidden">
-        <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
-      </div>
-      <div className="p-4">
-        <h3 className="text-lg font-bold text-white mb-2">{name}</h3>
-        <div className="flex justify-between text-sm">
-          <span className="text-abacus-text">{listings} listings</span>
-          <span className="flex items-center text-abacus-accent">
-            <Star size={14} className="mr-1 fill-abacus-accent" />
-            {rating}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const StatsItem = ({ label, value }: { label: string, value: string }) => {
-  return (
-    <div className="flex justify-between items-center py-3 border-b border-abacus-accent/10">
-      <span className="text-abacus-text">{label}</span>
-      <span className="text-lg font-mono font-bold text-white">{value}</span>
     </div>
   );
 };

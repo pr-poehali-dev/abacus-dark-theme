@@ -1,115 +1,161 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Shield, MessageSquare, LifeBuoy, ExternalLink, ChevronRight } from "lucide-react";
+import { Shield, ExternalLink, AlertTriangle } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-abacus-darker pt-16 pb-8 border-t border-abacus-accent/10">
+    <footer className="bg-black border-t border-[#9b87f5]/10 pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <span className="text-2xl font-mono font-bold text-gradient">ABACUS</span>
-              <div className="flex items-center px-2 py-1 bg-abacus-accent/10 rounded text-xs text-abacus-accent">
-                v2.0.1
-              </div>
+            <div className="flex items-center space-x-2 mb-4">
+              <Shield size={24} className="text-[#9b87f5]" />
+              <span className="text-xl font-mono font-bold text-white">ABACUS</span>
             </div>
-            <p className="text-abacus-text mb-6">
-              The most secure and anonymous marketplace platform on the darknet, built with advanced security and privacy technologies.
+            <p className="text-gray-400 text-sm mb-6">
+              Secure, anonymous marketplace platform with advanced encryption and escrow systems.
             </p>
-            <div className="flex space-x-2">
-              <Link to="/pgp" className="bg-abacus-darker border border-abacus-accent/20 rounded p-2 text-abacus-accent hover:bg-abacus-accent/10 transition-colors">
-                PGP Key
-              </Link>
-              <Link to="/verify" className="bg-abacus-darker border border-abacus-accent/20 rounded p-2 text-abacus-accent hover:bg-abacus-accent/10 transition-colors">
-                Verify
-              </Link>
-              <Link to="/onion-links" className="bg-abacus-darker border border-abacus-accent/20 rounded p-2 text-abacus-accent hover:bg-abacus-accent/10 transition-colors">
-                Mirror Links
-              </Link>
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="text-white font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <FooterLink to="/marketplace">Marketplace</FooterLink>
-              <FooterLink to="/vendors">Vendors</FooterLink>
-              <FooterLink to="/escrow">Escrow Service</FooterLink>
-              <FooterLink to="/security">Security Features</FooterLink>
-              <FooterLink to="/faq">FAQ</FooterLink>
-              <FooterLink to="/support">Support</FooterLink>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-white font-bold mb-4">Legal & Security</h4>
-            <ul className="space-y-2">
-              <FooterLink to="/terms">Terms of Service</FooterLink>
-              <FooterLink to="/privacy">Privacy Policy</FooterLink>
-              <FooterLink to="/security-policy">Security Policy</FooterLink>
-              <FooterLink to="/pgp-guide">PGP Guide</FooterLink>
-              <FooterLink to="/2fa">2FA Setup</FooterLink>
-              <FooterLink to="/vendor-terms">Vendor Terms</FooterLink>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-white font-bold mb-4">Support</h4>
-            <ul className="space-y-2">
-              <FooterLink to="/help">Help Center</FooterLink>
-              <FooterLink to="/tickets">Support Tickets</FooterLink>
-              <FooterLink to="/disputes">Dispute Resolution</FooterLink>
-              <FooterLink to="/bug-bounty">Bug Bounty Program</FooterLink>
-              <FooterLink to="/status">Service Status</FooterLink>
-            </ul>
-            
-            <div className="mt-6 p-4 bg-abacus-dark border border-abacus-accent/10 rounded-lg">
-              <div className="flex items-center mb-2">
-                <Shield size={18} className="text-abacus-accent mr-2" />
-                <span className="text-white font-bold">Verified Platform</span>
-              </div>
-              <p className="text-xs text-abacus-text mb-3">
-                Always verify our onion address and PGP signature to avoid phishing.
+            <div className="bg-[#1A1F2C] border border-[#9b87f5]/20 rounded p-3 flex items-start">
+              <AlertTriangle size={16} className="text-[#9b87f5] mr-2 flex-shrink-0 mt-0.5" />
+              <p className="text-xs text-gray-300">
+                Always verify marketplace URLs. Current onion address:<br/>
+                <span className="font-mono text-[#9b87f5] break-all">abacus27ddxezmb2zr7kqmgstb75uxh5qsm3grpucsqmwhnnwf74xid.onion</span>
               </p>
-              <button className="w-full py-2 px-3 bg-abacus-accent/10 hover:bg-abacus-accent/20 text-abacus-accent text-sm rounded flex justify-between items-center transition-colors">
-                Verify Authenticity <ChevronRight size={14} />
-              </button>
             </div>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-bold mb-4 font-mono">Marketplace</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/marketplace" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Browse Categories
+                </Link>
+              </li>
+              <li>
+                <Link to="/vendors" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Verified Vendors
+                </Link>
+              </li>
+              <li>
+                <Link to="/escrow" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Escrow System
+                </Link>
+              </li>
+              <li>
+                <Link to="/disputes" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Dispute Resolution
+                </Link>
+              </li>
+              <li>
+                <Link to="/reviews" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Review System
+                </Link>
+              </li>
+              <li>
+                <Link to="/vendor-application" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Become a Vendor
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-bold mb-4 font-mono">Security</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/pgp" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  PGP Key Verification
+                </Link>
+              </li>
+              <li>
+                <Link to="/security-guide" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Security Guidelines
+                </Link>
+              </li>
+              <li>
+                <Link to="/2fa" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Two-Factor Authentication
+                </Link>
+              </li>
+              <li>
+                <Link to="/canary" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Warrant Canary
+                </Link>
+              </li>
+              <li>
+                <Link to="/bug-bounty" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Bug Bounty Program
+                </Link>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-[#9b87f5] text-sm flex items-center">
+                  Security Audit Report <ExternalLink size={12} className="ml-1" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-bold mb-4 font-mono">Support</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/faq" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link to="/support" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Support Ticket
+                </Link>
+              </li>
+              <li>
+                <Link to="/guides" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  User Guides
+                </Link>
+              </li>
+              <li>
+                <Link to="/rules" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Platform Rules
+                </Link>
+              </li>
+              <li>
+                <Link to="/community" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Community Forum
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-[#9b87f5] text-sm">
+                  Contact Administration
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
-        
-        <div className="border-t border-abacus-accent/10 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-abacus-text mb-4 md:mb-0">
-              © 2025 ABACUS Marketplace. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-6">
-              <Link to="/pgp" className="text-abacus-text hover:text-abacus-accent text-sm flex items-center">
-                <Shield size={14} className="mr-1" /> PGP: A12C F3E4...
-              </Link>
-              <Link to="/support" className="text-abacus-text hover:text-abacus-accent text-sm flex items-center">
-                <MessageSquare size={14} className="mr-1" /> Contact
-              </Link>
-              <Link to="/help" className="text-abacus-text hover:text-abacus-accent text-sm flex items-center">
-                <LifeBuoy size={14} className="mr-1" /> Help
-              </Link>
-            </div>
+
+        <div className="pt-8 border-t border-[#9b87f5]/10 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-center md:text-left mb-4 md:mb-0">
+            <p className="text-gray-500 text-xs">
+              ABACUS Market © {new Date().getFullYear()} | Last Security Update: April 25, 2025
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center space-x-6">
+            <span className="text-xs text-gray-500 flex items-center">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 mr-1"></span> System: Online
+            </span>
+            <span className="text-xs text-gray-500 flex items-center">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 mr-1"></span> Escrow: Active
+            </span>
+            <span className="text-xs text-gray-500 flex items-center">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 mr-1"></span> Support: Available
+            </span>
+            <span className="text-xs text-gray-500 flex items-center">
+              <span className="w-2 h-2 rounded-full bg-amber-500 mr-1"></span> Server Load: Moderate
+            </span>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
-
-const FooterLink = ({ to, children }: { to: string, children: React.ReactNode }) => {
-  return (
-    <li>
-      <Link to={to} className="text-abacus-text hover:text-abacus-accent transition-colors flex items-center">
-        <ChevronRight size={14} className="mr-1 text-abacus-accent/50" />
-        {children}
-      </Link>
-    </li>
   );
 };
 
